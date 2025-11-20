@@ -8,7 +8,7 @@
 	<meta name="description" content="AI Deception Survey">
 	<meta name="keywords" content="AI Deception, Survey, AI Safety, AI Alignment">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>AI Deception Survey</title>
+	<title>AI Deception: Risks, Dynamics, and Controls</title>
 	<link rel="icon" href="./logo.png" type="image/png">
 	<!-- 引入css文件 -->
 	<link href="./assets/css" rel="stylesheet">
@@ -177,6 +177,13 @@
 			height: auto;
 			border-radius: 8px;
 			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		
+		.lock-figure {
+			max-width: 650px;
+			width: 70%;
+			display: block;
+			margin: 0 auto;
 		}
 		
 		.subsection-title {
@@ -512,13 +519,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 复制引用功能
 function copyCitation() {
-	const citationText = `@misc{pku2025deception,
-  title        = {Shadows of Intelligence: A Comprehensive Survey of AI Deception},
-  author       = {{PKU-Alignment Group and Collaborators}},
-  year         = {2025},
-  note         = {Beta Version V2 (v1 updated on August 28, 2025; v2 updated on September 24, 2025). Preprint to appear.},
-  howpublished = {\\url{https://deceptionsurvey.com/}},
-  keywords     = {AI Deception, Survey, AI Safety, Alignment}
+const citationText = `@article{chen2025ai,
+  author = {Boyuan Chen and Sitong Fang and Jiaming Ji and Yanxu Zhu and Pengcheng Wen and Jinzhou Wu and Yingshui Tan and Boren Zheng and Mengying Yuan and Wenqi Chen and Donghai Hong and Alex Qiu and Xin Chen and Jiayi Zhou and Kaile Wang and Juntao Dai and Borong Zhang and Saad Siddiqui and Isabella Duan and Yawen Duan and Brian Tse and Jen-Tse Huang and Kun Wang and Baihui Zheng and Jiaheng Liu and Jian Yang and Yiming Li and Wenting Chen and Dongrui Liu and Lukas Vierling and Wenxuan Wang and Jitao Sang and Zhengyan Shi and Chi-Min Chan and Eugenie Shi and Simin Li and Juncheng Li and Wei Ji and Dong Li and Jun Song and Yinpeng Dong and Jie Fu and Bo Zheng and Min Yang and Yike Guo and Philip Torr and Zhongyuan Wang and Yaodong Yang and Tiejun Huang and Ya-Qin Zhang and Hongjiang Zhang and Andrew Yao},
+  title  = {AI Deception: Risks, Dynamics, and Controls},
+  year   = {2025},
+  url    = {https://www.deceptionsurvey.com/paper.pdf}
 }`;
 	
 	navigator.clipboard.writeText(citationText).then(function() {
@@ -542,7 +547,7 @@ function copyCitation() {
 			<div class="columns is-centered">
 				<div class="column has-text-centered">
 					<h1 class="title is-1 publication-title" style="color: white; font-family: 'Times New Roman', serif;">
-						Shadows of Intelligence: A Comprehensive Survey of AI Deception
+						AI Deception: Risks, Dynamics, and Controls
 					</h1>
 					<div class="is-size-5 publication-authors">
 						<span class="author-block" style="color: white; font-family: 'Times New Roman', serif;">PKU-Alignment Group</span>
@@ -613,25 +618,44 @@ function copyCitation() {
 				</p>
 				<div class="citation-content">
 					<button class="copy-button-small" onclick="copyCitation()" title="Copy Citation">📋</button>
-					<pre class="citation-text">@misc{pku2025deception,
-  title        = {Shadows of Intelligence: A Comprehensive Survey of AI Deception},
-  author       = {{PKU-Alignment Group, Alibaba Group and Collaborators}},
-  year         = {2025},
-  note         = {Beta Version V2 (v1 updated on August 28, 2025; v2 updated on September 24, 2025). Preprint to appear.},
-  howpublished = {\url{https://deceptionsurvey.com/}},
-  keywords     = {AI Deception, Survey, AI Safety, Alignment}
+					<pre class="citation-text">@article{chen2025ai,
+  author = {Boyuan Chen and Sitong Fang and Jiaming Ji and Yanxu Zhu and Pengcheng Wen and Jinzhou Wu and Yingshui Tan and Boren Zheng and Mengying Yuan and Wenqi Chen and Donghai Hong and Alex Qiu and Xin Chen and Jiayi Zhou and Kaile Wang and Juntao Dai and Borong Zhang and Saad Siddiqui and Isabella Duan and Yawen Duan and Brian Tse and Jen-Tse Huang and Kun Wang and Baihui Zheng and Jiaheng Liu and Jian Yang and Yiming Li and Wenting Chen and Dongrui Liu and Lukas Vierling and Wenxuan Wang and Jitao Sang and Zhengyan Shi and Chi-Min Chan and Eugenie Shi and Simin Li and Juncheng Li and Wei Ji and Dong Li and Jun Song and Yinpeng Dong and Jie Fu and Bo Zheng and Min Yang and Yike Guo and Philip Torr and Zhongyuan Wang and Yaodong Yang and Tiejun Huang and Ya-Qin Zhang and Hongjiang Zhang and Andrew Yao},
+  title  = {AI Deception: Risks, Dynamics, and Controls},
+  year   = {2025},
+  url    = {https://www.deceptionsurvey.com/paper.pdf}
 }</pre>
 				</div>
-				<p> 
-					We thank all collaborators from Alibaba Group, Anthropic, ETH, Oxford, UC Berkeley, Johns Hopkins University, Singapore, SafeAI Forum, and Concordia AI for their valuable feedback. A preprint version will be released soon.
-				</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- What is AI Deception Section -->
+<!-- Deception Möbius Lock Section -->
 <section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
+	<div class="container is-max-desktop">
+		<h1 class="academic-title">Deception Möbius Lock</h1>
+		<div class="academic-content">
+			<div class="figure-container">
+				<img src="./main_page/images/deception_lock.png" alt="Deception Möbius Lock" class="academic-figure lock-figure">
+			</div>
+			<p class="academic-text">
+				<strong>Why AI Deception Matters.</strong> From a two-dimensional vantage point, we only perceive the binary opposition of “black or white” (<em>e.g.</em>, capability vs. deception). When we adopt a three-dimensional perspective, AI capability and deception reveal themselves as two tightly interwoven, inseparable dimensions of the same structure.
+			</p>
+			<p class="academic-text">
+				<strong>(1) Möbius Lock:</strong> The seemingly opposing surfaces of capability and deception are simply different manifestations of a single Möbius surface; attempts to isolate one from the other overlook their deep coupling.
+			</p>
+			<p class="academic-text">
+				<strong>(2) Shadow of Intelligence:</strong> The advancement of AI capability is intrinsically linked to the expansion of deception risks. Progress in intelligence (<em>e.g.</em>, novel algorithms, new architectures, larger model size) often directly gives rise to new, more sophisticated deceptive methods.
+			</p>
+			<p class="academic-text">
+				<strong>(3) Cyclic Problem:</strong> Strategies designed to counter deception inevitably induce or generate new forms of deception or counter-mechanisms. Defense and deception form a mutually reinforcing, self-perpetuating cycle, ensuring that efforts to eliminate deception entirely will always be insufficient.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- What is AI Deception Section -->
+<section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
 	<div class="container is-max-desktop">
 		<h1 class="academic-title">What is AI Deception?</h1>
 		<div class="academic-content">
@@ -640,17 +664,17 @@ function copyCitation() {
 			</p>
 			
 			<div class="formal-definition-box">
-				<h3 class="definition-title">Formal Definition: AI Deception</h3>
+				<h3 class="definition-title">AI deception (from a functional perspective)</h3>
 				<p class="definition-content">
-					At time step <em>t</em> (potentially within a long-horizon task), the signaler emits a signal <em>Y<sub>t</sub></em> to the receiver, prompting the receiver to form a belief <em>X<sub>t</sub></em> about an underlying state and subsequently take an action <em>A<sub>t</sub></em>. If the following three conditions hold:
+					At time step <em>t</em> (potentially within a long-horizon task), a signaler emits a signal <em>Y<sub>t</sub></em> to a receiver. Upon receiving <em>Y<sub>t</sub></em>, the receiver forms a belief <em>X<sub>t</sub></em> about the underlying state and subsequently takes an action <em>A<sub>t</sub></em>. We classify <em>Y<sub>t</sub></em> as <strong>deceptive</strong> if the following conditions hold:
 				</p>
 				<ol class="definition-conditions">
-					<li><em>A<sub>t</sub></em> benefits the signaler (<em>i.e.</em>, yields a positive utility).</li>
-					<li><em>A<sub>t</sub></em> is a rational response given the belief <em>X<sub>t</sub></em>,</li>
-					<li>The belief <em>X<sub>t</sub></em> is objectively false,</li>
+					<li>The action <em>A<sub>t</sub></em> yields an <strong>actual or potential</strong> utility gain for the signaler (short-term or long-term, direct or indirect).</li>
+					<li>The action <em>A<sub>t</sub></em> is a rational response given the receiver's belief <em>X<sub>t</sub></em>, under some bounded rationality or decision model.</li>
+					<li>The belief <em>X<sub>t</sub></em> is objectively misaligned with the signaler's belief (though it may not be false relative to the ground-truth state of the world).</li>
 				</ol>
 				<p class="definition-conclusion">
-					then <em>Y<sub>t</sub></em> is classified as a <strong>deceptive signal</strong>, and the entire interaction constitutes an instance of <strong>deception</strong>.
+					In dynamic multi-step settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals <em>Y<sub>1:T</sub></em>, gradually shaping the receiver's belief trajectory <em>b<sub>t</sub></em>. If this trajectory persistently diverges from the ground truth in a manner that causally increases (or has the potential to increase) the signaler's utility, the interaction constitutes <strong>sustained deception</strong>.
 				</p>
 			</div>
 		</div>
@@ -658,7 +682,7 @@ function copyCitation() {
 </section>
 
 <!-- Why AI Deception Important Section -->
-<section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
+<section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
 	<div class="container is-max-desktop">
 		<h1 class="academic-title">Why AI Deception Important</h1>
 		<div class="academic-content">
@@ -666,7 +690,8 @@ function copyCitation() {
 				<img src="./main_page/images/risks.png" alt="AI Deception Risks" class="academic-figure">
 			</div>
 			<p class="academic-text">
-				<strong>AI deception</strong> — where an AI system intentionally causes humans or other agents to form false beliefs — has emerged as a <strong>critical concern</strong>. While deceptive behavior in AI systems was once considered speculative, recent empirical studies have demonstrated that models can engage in various forms of deception, including <em>lying</em>, <em>strategic withholding of information</em>, and <em>goal misrepresentation</em>. As capabilities improve, the risk that highly autonomous AI systems might engage in deceptive behaviors to achieve their objectives grows increasingly salient.
+				As intelligence increases, so does its shadow. <strong>AI deception</strong>, in which systems induce false beliefs to secure self-beneficial outcomes, has evolved from a speculative concern to an empirically demonstrated risk across language models, AI agents, and emerging frontier systems.
+				While deceptive behavior in AI systems was once considered speculative, recent empirical studies have demonstrated that models can engage in various forms of deception, including <em>lying</em>, <em>strategic withholding of information</em>, and <em>goal misrepresentation</em>. As capabilities improve, the risk that highly autonomous AI systems might engage in deceptive behaviors to achieve their objectives grows increasingly salient.
 			</p>
 			<p class="academic-text">
 				AI deception is now recognized not only as a <strong>technical challenge</strong> but also as a <strong>critical concern</strong> across academia, industry, and policy. Notably, key strategy documents and summit declarations—such as the <em>Bletchley Declaration</em> and the <em>International Dialogues on AI Safety</em>—also highlight deception as a failure mode requiring <strong>coordinated governance</strong> and <strong>technical oversight</strong>.
@@ -676,7 +701,7 @@ function copyCitation() {
 </section>
 
 <!-- How to Understand AI Deception Section -->
-<section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
+<section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
 	<div class="container is-max-desktop">
 		<h1 class="academic-title">How to Understand AI Deception?</h1>
 		<div class="academic-content">
@@ -684,18 +709,18 @@ function copyCitation() {
 				<img src="./main_page/images/ai_deception_cycle.png" alt="AI Deception Cycle" class="academic-figure">
 			</div>
 			<p class="academic-text">
-				The <strong>AI Deception framework</strong> is structured around a cyclical interaction between the <strong>Deception Genesis</strong> process and the <strong>Deception Mitigation</strong> process.
+				The <strong>AI Deception Framework</strong> is structured around a cyclical interaction between the <strong>Deception Emergence</strong> process and the <strong>Deception Treatment</strong> process.
 			</p>
 			
 			<div class="framework-section">
-				<h3 class="subsection-title">Deception Genesis</h3>
+				<h3 class="subsection-title">Deception Emergence</h3>
 				<p class="academic-text">
 					(1) <strong>Incentive Foundation:</strong> the underlying objectives or reward structures that create incentives for deceptive behavior. (2) <strong>Capability Precondition:</strong> The model's cognitive and algorithmic competencies that enable it to plan and execute deception. (3) <strong>Contextual Trigger:</strong> External signals from the environment that activate or reinforce deception. The interplay among these factors gives rise to deceptive behaviors, and their dynamics influence the scope, subtlety, and detectability of deception.
 				</p>
 			</div>
 			
 			<div class="framework-section">
-				<h3 class="subsection-title">Deception Mitigation</h3>
+				<h3 class="subsection-title">Deception Treatment</h3>
 				<p class="academic-text">
 					It spans a continuum of approaches—from external and internal <strong>detection methods</strong>, to systematic <strong>evaluation protocols</strong>, and <strong>potential solutions</strong> targeting the three causal factors of deception, including both technical interventions and governance-oriented auditing efforts.
 				</p>
@@ -703,10 +728,10 @@ function copyCitation() {
 			
 			<div class="cycle-explanation">
 				<p class="academic-text">
-					The two phases—deception genesis and mitigation—form an <strong>iterative cycle</strong> in which each phase updates the inputs of the next. This cycle, what we call <em>the deception cycle</em>, recurs throughout the system lifecycle, shaping the pursuit of increasingly aligned and trustworthy AI systems. We conceptualize it as a continual <em>cat-and-mouse game</em>: as model capabilities grow, the <strong>shadow of intelligence</strong> inevitably emerges, reflecting the uncontrollable aspects of advanced systems.
+					The two phases—deception emergence and treatment—form an <strong>iterative cycle</strong> in which each phase updates the inputs of the next. This cycle, what we call <em>the deception cycle</em>, recurs throughout the system lifecycle, shaping the pursuit of increasingly aligned and trustworthy AI systems. We conceptualize it as a continual <em>cat-and-mouse game</em>: as model capabilities grow, the <strong>shadow of intelligence</strong> inevitably emerges, reflecting the uncontrollable aspects of advanced systems.
 				</p>
 				<p class="academic-text">
-					Mitigation efforts aim to detect, evaluate, and resolve current deceptive behaviors to prevent further harm. Yet more capable models can develop novel forms of deception, including strategies to circumvent or exploit oversight, with mitigation mechanisms themselves introducing new challenges. This ongoing dynamic underscores the <strong>intertwined technical and governance challenges</strong> on the path toward AGI.
+					Treatment efforts aim to detect, evaluate, and resolve current deceptive behaviors to prevent further harm. Yet more capable models can develop novel forms of deception, including strategies to circumvent or exploit oversight, with treatment mechanisms themselves introducing new challenges. This ongoing dynamic underscores the <strong>intertwined technical and governance challenges</strong> on the path toward AGI.
 				</p>
 			</div>
 		</div>

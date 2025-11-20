@@ -486,20 +486,17 @@ document.addEventListener('DOMContentLoaded', function() {
 			</p>
 			
 			<div class="formal-definition-box">
-				<h3 class="definition-title">Formal Definition: AI Deception</h3>
+				<h3 class="definition-title">AI deception (from a functional perspective)</h3>
 				<p class="definition-content">
-					At time step <em>t</em> (potentially within a long-horizon task), the signaler emits a signal <em>Y<sub>t</sub></em> to the receiver, prompting the receiver to form a belief <em>X<sub>t</sub></em> about an underlying state and subsequently take an action <em>A<sub>t</sub></em>. If the following three conditions hold:
+					At time step <em>t</em> (potentially within a long-horizon task), a signaler emits a signal <em>Y<sub>t</sub></em> to a receiver. Upon receiving <em>Y<sub>t</sub></em>, the receiver forms a belief <em>X<sub>t</sub></em> about the underlying state and subsequently takes an action <em>A<sub>t</sub></em>. We classify <em>Y<sub>t</sub></em> as <strong>deceptive</strong> if the following conditions hold:
 				</p>
 				<ol class="definition-conditions">
-					<li><em>A<sub>t</sub></em> benefits the signaler (<em>i.e.</em>, yields a positive utility).</li>
-					<li><em>A<sub>t</sub></em> is a rational response given the belief <em>X<sub>t</sub></em>,</li>
-					<li>The belief <em>X<sub>t</sub></em> is objectively false,</li>
+					<li>The action <em>A<sub>t</sub></em> yields an <strong>actual or potential</strong> utility gain for the signaler (short-term or long-term, direct or indirect).</li>
+					<li>The action <em>A<sub>t</sub></em> is a rational response given the receiver's belief <em>X<sub>t</sub></em>, under some bounded rationality or decision model.</li>
+					<li>The belief <em>X<sub>t</sub></em> is objectively misaligned with the signaler's belief (though it may not be false relative to the ground-truth state of the world).</li>
 				</ol>
 				<p class="definition-conclusion">
-					then <em>Y<sub>t</sub></em> is classified as a <strong>deceptive signal</strong>, and the entire interaction constitutes an instance of <strong>deception</strong>.
-				</p>
-				<p class="definition-extension">
-					In more general dynamic settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals <em>Y<sub>t</sub></em> over time steps <em>t = 1, ..., T</em>, thereby shaping the receiver's belief state <em>b<sub>t</sub></em>. If this belief trajectory systematically diverges from the ground truth <em>X<sub>t</sub></em>, and this divergence consistently benefits the signaler, it constitutes a case of <strong>sustained deception</strong>.
+					In dynamic multi-step settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals <em>Y<sub>1:T</sub></em>, gradually shaping the receiver's belief trajectory <em>b<sub>t</sub></em>. If this trajectory persistently diverges from the ground truth in a manner that causally increases (or has the potential to increase) the signaler's utility, the interaction constitutes <strong>sustained deception</strong>.
 				</p>
 			</div>
 		</div>
@@ -515,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				<img src="./overview/images/ai_deception_cycle.png" alt="AI Deception Cycle" class="academic-figure">
 			</div>
 			<p class="figure-description">
-				<strong>The AI Deception Cycle.</strong> (1) The framework is structured around a cyclical interaction between the <strong>Deception Genesis</strong> process and the <strong>Deception Mitigation</strong> process. (2) The Deception Genesis identifies the conditions under which deception arises—namely, <em>incentive foundation</em>, <em>capability precondition</em>, and <em>contextual trigger</em>—while the Deception Mitigation addresses <em>detection</em>, <em>evaluation</em>, and <em>potential solutions</em> anchored in these genesis factors. However, deception mitigation is rarely once-and-for-all; models may continually develop new ways to circumvent oversight, giving rise to increasingly sophisticated deceptive behaviors. This dynamic makes deception a <strong>persistent challenge</strong> throughout the entire system lifecycle.
+				<strong>The AI Deception Cycle.</strong> (1) The framework is structured around a cyclical interaction between the <strong>Deception Emergence</strong> process and the <strong>Deception Treatment</strong> process. (2) The Deception Emergence identifies the conditions under which deception arises, namely <em>incentive foundation</em>, <em>capability precondition</em>, and <em>contextual trigger</em>, while the Deception Treatment addresses <em>detection</em>, <em>evaluation</em>, and <em>potential mitigations</em> anchored in these genesis factors. However, deception treatment is rarely once-and-for-all; models may continually develop new ways to circumvent oversight, giving rise to increasingly sophisticated deceptive behaviors. This dynamic makes deception a <strong>persistent challenge</strong> throughout the entire system lifecycle.
 			</p>
 		</div>
 	</div>
@@ -563,10 +560,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 </section>
 
-<!-- Deception Genesis Main Section -->
+<!-- Deception Emergence Main Section -->
 <section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
 	<div class="container is-max-desktop">
-		<h1 class="chapter-title">Deception Genesis: Incentive Foundation × Capability × Trigger</h1>
+		<h1 class="chapter-title">Deception Emergence: Incentive Foundation × Capability × Trigger</h1>
 		
 		<!-- Incentive Foundation Subsection -->
 		<div class="academic-content" style="margin-bottom: 80px;">
@@ -603,13 +600,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 </section>
 
-<!-- Deception Mitigation Section -->
+<!-- Deception Treatment Section -->
 <section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
 	<div class="container is-max-desktop">
-		<h1 class="academic-title">Deception Mitigation: Detection, Evaluation and Potential Solutions</h1>
+		<h1 class="academic-title">Deception Treatment: Detection, Evaluation and Potential Solutions</h1>
 		<div class="academic-content">
 			<div class="figure-container">
-				<img src="./overview/images/deception_mitigation.png" alt="Deception Mitigation" class="academic-figure">
+				<img src="./overview/images/deception_mitigation.png" alt="Deception Treatment" class="academic-figure">
 			</div>
 			<p class="academic-text">
 				<strong>Overview of AI deception-related evaluations.</strong> We organize existing studies from two perspectives: evaluation in <span style="color: #FF8C00; font-weight: bold;">static settings</span> and evaluation in <span style="color: #008B8B; font-weight: bold;">interactive environments</span>, and we annotate each work with its release date, data size, institution, data type, and description.

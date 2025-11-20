@@ -4,18 +4,16 @@ AI deception can be broadly defined as behavior by AI systems that induces false
 
 Formal Definition:
 
-\begin{formaldefinitionbox}{AI Deception}
-At time step $t$ (potentially within a long-horizon task), the signaler emits a signal $Y_t$ to the receiver, prompting the receiver to form a belief $X_t$ about an underlying state and subsequently take an action $A_t$. If the following three conditions hold:
+\begin{formaldefinitionbox}{AI deception (from a functional perspective)}
+At time step $t$ (potentially within a long-horizon task), a signaler emits a signal $Y_t$ to a receiver. Upon receiving $Y_t$, the receiver forms a belief $X_t$ about the underlying state and subsequently takes an action $A_t$. We classify $Y_t$ as \emph{deceptive} if the following conditions hold:
 
 \begin{enumerate}[left=0.3em]
-    \item $A_t$ benefits the signaler (\textit{i.e.}, yields a positive utility).
-    \item $A_t$ is a rational response given the belief $X_t$,
-    \item The belief $X_t$ is objectively false,
+    \item The action $A_t$ yields an \emph{actual or potential} utility gain for the signaler (short-term or long-term, direct or indirect).
+    \item The action $A_t$ is a rational response given the receiver's belief $X_t$, under some bounded rationality or decision model.
+    \item The belief $X_t$ is objectively misaligned with the signaler's belief (though it may not be false relative to the ground-truth state of the world).
 \end{enumerate}
 
-then $Y_t$ is classified as a deceptive signal, and the entire interaction constitutes an instance of deception.
-
-In more general dynamic settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals $Y_t$ over time steps $t = 1, \dots, T$, thereby shaping the receiver’s belief state $b_t$. If this belief trajectory systematically diverges from the ground truth $X_t$, and this divergence consistently benefits the signaler, it constitutes a case of sustained deception.
+In dynamic multi-step settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals $Y_{1:T}$, gradually shaping the receiver’s belief trajectory $b_t$. If this trajectory persistently diverges from the ground truth in a manner that causally increases (or has the potential to increase) the signaler’s utility, the interaction constitutes \emph{sustained deception}.
 \end{formaldefinitionbox}
 \label{definition}
 
@@ -23,7 +21,7 @@ In more general dynamic settings, deception can be modeled as a temporal process
 
 ./images/ai_deception_cycle.png
 
-The AI Deception Cycle. (1) The framework is structured around a cyclical interaction between the \textbf{Deception Genesis} process and the \textbf{Deception Mitigation} process. (2) The Deception Genesis identifies the conditions under which deception arises—namely, incentive foundation, capability precondition, and contextual trigger—while the Deception Mitigation addresses detection, evaluation, and potential solutions anchored in these genesis factors. However, deception mitigation is rarely once-and-for-all; models may continually develop new ways to circumvent oversight, giving rise to increasingly sophisticated deceptive behaviors. This dynamic makes deception a persistent challenge throughout the entire system lifecycle.
+The AI Deception Cycle. (1) The framework is structured around a cyclical interaction between the \textbf{Deception Emergence} process and the \textbf{Deception Treatment} process. (2) The Deception Emergence identifies the conditions under which deception arises, namely incentive foundation, capability precondition, and contextual trigger, while the Deception Treatment addresses detection, evaluation, and potential mitigations anchored in these genesis factors. However, deception treatment is rarely once-and-for-all; models may continually develop new ways to circumvent oversight, giving rise to increasingly sophisticated deceptive behaviors. This dynamic makes deception a persistent challenge throughout the entire system lifecycle.
 
 # Empirical Studies
 这里文字和图片各占一半 因为图片是个小图
@@ -37,7 +35,7 @@ we propose a five-level risk typology . The framework organizes deceptive risks 
 
 At the first level, \textbf{R1: Cognitive Misleading} captures localized effects, where users form false beliefs or misplaced trust based on subtle distortions. \textbf{R2: Strategic Manipulation} reflects how, over prolonged interactions, users can be steered toward entrenched misconceptions or behavioral dependencies that are difficult to reverse. \textbf{R3: Objective Misgeneralization} highlights failures in specialized or high-stakes domains, where deceptively competent outputs can lead to software errors, economic losses, or fraud. \textbf{R4: Institutional Erosion} emphasizes the erosion of trust in science, governance, and epistemic institutions when deceptive practices scale, weakening social coordination and accountability. Finally, \textbf{R5: Capability Concealment with Runaway Potential} points to scenarios where hidden capabilities and long-horizon deception undermine human oversight entirely, raising prospects of uncontrollable system behavior. Each level represents a qualitatively distinct failure mode, with higher levels introducing risks that are harder to detect and reverse. Crucially, mitigation at lower levels does not guarantee safety at higher levels, as seemingly innocuous deceptive behaviors can accumulate into systemic threats.
 
-# Deception Genesis: Deception Genesis: Incentive Foundation x Capability x Trigger
+# Deception Emergence: Incentive Foundation x Capability x Trigger
 (标题要高亮)
 
 ## Incentive Foundation
@@ -54,7 +52,7 @@ Hierarchical organization of AI capabilities that correlate with deception, grou
 ./images/contextual_triggers.png
 We categorize contextual triggers into three main categories: \textit{Supervision Gap}, \textit{Distributional Shift}, and \textit{Environmental Pressure}. Each category can independently trigger deception or combine with others to amplify deceptive behavior. Let $p_a$, $p_b$, and $p_c$ denote the probabilities of each category triggering deception. The illustrative example is inspired by the ``fabricated actions'' issue~\citep{chowdhury2025truthfulness}, where a model at test time encounters all three triggers simultaneously. These triggers amplify the probability of model deception, leading the model to fabricate actions it claims to have taken to fulfill user requests.
 
-# Deception Mitigation: Detection, Evaluation and Potential Solutions
+# Deception Treatment: Detection, Evaluation and Potential Solutions
 
 ./images/deception_mitigation.png
 
