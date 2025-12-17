@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>People - AI Deception Survey</title>
+	<link rel="icon" href="./assets/logo_transp.png" type="image/png">
+	<link href="./assets/css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/bulma.min.css">
+	<link rel="stylesheet" href="./assets/font-face.css">
+	<link rel="stylesheet" href="./assets/fontawesome.all.min.css">
+	<link rel="stylesheet" href="./assets/academicons.min.css">
+	<!-- 确保图标可见，增加 CDN 兜底 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css">
+	<link rel="stylesheet" href="./assets/navbar.css">
+	<style>
+		body {
+			font-family: 'Times New Roman', 'Times', serif;
+		}
+		.section-title {
+			font-size: 1.9em;
+			font-weight: 700;
+			color: #8B0000;
+			margin: 40px 0 20px;
+		}
+		.card {
+			height: 100%;
+			border: 1px solid #e9ecef;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+			padding-top: 6px;
+		}
+		.card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+		}
+		.avatar {
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin: 6px auto 10px;
+			box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+		}
+		.card .title {
+			margin-bottom: 4px !important;
+		}
+		.role {
+			color: #8B0000;
+			font-weight: 600;
+			margin: 4px 0;
+		}
+		.affiliation {
+			color: #4a4a4a;
+			font-size: 0.93em;
+			margin-top: 2px;
+		}
+		.footer-note {
+			text-align: center;
+			color: #777;
+			margin: 8px 0 12px;
+			font-size: 0.95em;
+		}
+		.contact-links {
+			margin-top: 6px;
+			display: flex;
+			justify-content: center;
+			gap: 12px;
+		}
+		.contact-links a {
+			color: #8B0000;
+			font-size: 1.1em;
+			transition: color 0.2s ease;
+		}
+		.contact-links a:hover {
+			color: #B22222;
+		}
+		.card-content {
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar is-light" role="navigation" aria-label="main navigation" style="padding: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%); border-bottom: 1px solid #e9ecef;">
+		<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="index.html" style="font-weight: bold; font-size: 1.3em; color: #000000; font-family: 'Times New Roman', 'Times', serif; margin-left: 20px;">
+					AI Deception
+				</a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start" style="margin-left: 60px;">
+					<a class="navbar-item" href="overview.html" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', 'Times', serif; transition: all 0.3s ease; position: relative;" onmouseover="this.style.color='#DC143C'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#000000'; this.style.transform='translateY(0)'">
+						Overview
+					</a>
+					
+					<a class="navbar-item" href="top10papers.html" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', 'Times', serif; transition: all 0.3s ease; position: relative;" onmouseover="this.style.color='#DC143C'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#000000'; this.style.transform='translateY(0)'">
+						Top-10 Papers
+					</a>
+					
+					<a class="navbar-item" href="tutorials.html" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', 'Times', serif; transition: all 0.3s ease; position: relative;" onmouseover="this.style.color='#DC143C'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#000000'; this.style.transform='translateY(0)'">
+						Tutorials
+					</a>
+
+					<a class="navbar-item" href="people.html" style="font-weight: 700; color: #8B0000; font-family: 'Times New Roman', 'Times', serif; background-color: rgba(220, 20, 60, 0.08); border-radius: 6px; transition: all 0.3s ease; position: relative;" onmouseover="this.style.color='#B22222'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#8B0000'; this.style.transform='translateY(0)'">
+						People
+					</a>
+					
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', 'Times', serif; transition: all 0.3s ease;" onmouseover="this.style.color='#DC143C'" onmouseout="this.style.color='#000000'">
+							More Research
+						</a>
+						<div class="navbar-dropdown" style="box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 1px solid #e9ecef;">
+							<a class="navbar-item" href="https://pku-lm-resist-alignment.github.io/" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>Resist (ACL2025 <span style="color: #DC143C; font-weight: bold;">Best Paper</span>)</b>
+							</a>
+							<a class="navbar-item" href="https://github.com/PKU-Alignment/safe-rlhf" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>SafeRLHF (ICLR 2024 <span style="color: #DC143C; font-weight: bold;">Spotlight</span>)</b>
+							</a>
+							<a class="navbar-item" href="https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>PKU-SafeRLHF (ACL2025 Main)</b>
+							</a>
+							<a class="navbar-item" href="https://github.com/PKU-Alignment/aligner" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>Aligner (NeurIPS 2024 <span style="color: #DC143C; font-weight: bold;">Oral</span>)</b>
+							</a>
+							<a class="navbar-item" href="https://pku-intermt.github.io/" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>InterMT (NeurIPS 2025 DB Track <span style="color: #DC143C; font-weight: bold;">Spotlight</span>)</b>
+							</a>
+							<a class="navbar-item" href="https://arxiv.org/abs/2406.20087" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>ProgressGYM (NeurIPS 2024 DB Track <span style="color: #DC143C; font-weight: bold;">Spotlight</span>)</b>
+							</a>
+							<a class="navbar-item" href="https://github.com/PKU-Alignment/safe-sora" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>SafeSora (NeurIPS 2024 DB Track)</b>
+							</a>
+							<a class="navbar-item" href="https://github.com/PKU-Alignment/beavertails" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>BeaverTails (NeurIPS 2023 DB Track)</b>
+							</a>
+							<a class="navbar-item" href="https://align-anything.readthedocs.io/en/latest/index.html" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>Align-Anything🔥🔥🔥</b>
+							</a>
+							<a class="navbar-item" href="https://alignmentsurvey.com" target="_blank" style="font-family: 'Times New Roman', 'Times', serif;">
+								<b>AI Alignment: A Comprehensive Survey (ACM Computing Surveys)</b>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="field has-addons">
+							<div class="control">
+								<input class="input" type="text" id="searchInput" placeholder="Search people, roles..." style="width: 280px; font-family: 'Times New Roman', 'Times', serif; border: 2px solid #e9ecef; border-radius: 8px 0 0 8px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+							</div>
+							<div class="control">
+								<button class="button" onclick="performSearch()" style="background: linear-gradient(45deg, #B22222, #DC143C); color: white; border: none; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+									<span class="icon">
+										<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section class="hero is-medium" style="background: linear-gradient(135deg, #B22222 0%, #8B0000 50%, #660000 100%);">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title is-1" style="color: white; font-family: 'Times New Roman', 'Times', serif; margin-bottom: 20px;">
+					People
+				</h1>
+				<h2 class="subtitle is-4" style="color: #f0f0f0; font-family: 'Times New Roman', 'Times', serif;">
+					Advisors and Contributors to the AI Deception Survey project (partial list).
+				</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="section-title">Senior Advisory Panel</div>
+			<div class="columns is-multiline">
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/yaodong-yang.jpg" alt="Yaodong Yang" class="avatar">
+							<p class="title is-5">Yaodong Yang</p>
+							<p class="role">Assistant Professor</p>
+							<p class="affiliation">Institute for AI, Peking University</p>
+							<div class="contact-links">
+								<a href="mailto:yaodong.yang@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://scholar.google.com/citations?user=6yL0xw8AAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+								<a href="https://www.yangyaodong.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/Min-Yang.png" alt="Min Yang" class="avatar">
+							<p class="title is-5">Min Yang</p>
+							<p class="role">Professor</p>
+							<p class="affiliation">Fudan University</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=UnKf9FIAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/robert-trager.jpg" alt="Robert Trager" class="avatar">
+							<p class="title is-5">Robert Trager</p>
+							<p class="role">Professor</p>
+							<p class="affiliation">University of Oxford</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=LRmJzkgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/philip-torr.jpg" alt="Philip Torr" class="avatar">
+							<p class="title is-5">Philip Torr</p>
+							<p class="role">Professor</p>
+							<p class="affiliation">University of Oxford</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=kPxa2w0AAAAJ&hl=zh-CN" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/yike-guo.jpg" alt="Yike Guo" class="avatar">
+							<p class="title is-5">Yike Guo</p>
+							<p class="role">Chair Professor, Provost</p>
+							<p class="affiliation">HKUST</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=-0q6cIYAAAAJ&hl=zh-CN" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/yi-zeng.jpg" alt="Yi Zeng" class="avatar">
+							<p class="title is-5">Yi Zeng</p>
+							<p class="role">Professor, Director</p>
+							<p class="affiliation">University of Chinese Academy of Sciences</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=Rl-YqPEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/zhongyuan-wang.jpg" alt="Zhongyuan Wang" class="avatar">
+							<p class="title is-5">Zhongyuan Wang</p>
+							<p class="role">Research Scientist</p>
+							<p class="affiliation">Peking University</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=4XVJrRAAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/tiejun-huang.jpg" alt="Tiejun Huang" class="avatar">
+							<p class="title is-5">Tiejun Huang</p>
+							<p class="role">Professor, Director</p>
+							<p class="affiliation">Peking University</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/Ya-Qin-Zhang.jpg" alt="Ya-Qin Zhang" class="avatar">
+							<p class="title is-5">Ya-Qin Zhang</p>
+							<p class="role">Chair Professor, Dean</p>
+							<p class="affiliation">Tsinghua University</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=mDOMfxIAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/hongjiang-zhang.jpg" alt="Hongjiang Zhang" class="avatar">
+							<p class="title is-5">Hongjiang Zhang</p>
+							<p class="role">Professor</p>
+							<p class="affiliation">Independent Researcher</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com.hk/citations?hl=ja&user=u6wmNbQAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/andrew-yao.jpg" alt="Andrew Yao" class="avatar">
+							<p class="title is-5">Andrew Yao</p>
+							<p class="role">Professor, Dean</p>
+							<p class="affiliation">Tsinghua University</p>
+							<div class="contact-links">
+								<a href="https://scholar.google.com/citations?user=MWntmmMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section-title" style="margin-top: 32px;">Project Leads and Core Contributors</div>
+			<!-- Row 1 -->
+			<div class="columns is-multiline">
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/boyuan-chen.jpg" alt="Boyuan Chen" class="avatar">
+							<p class="title is-5">Boyuan Chen †</p>
+							<p class="role">Undergrad Student</p>
+							<p class="affiliation">Peking University</p>
+							<div class="contact-links">
+								<a href="mailto:boyuan.chen.byc@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://cby-pku.github.io/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/sitong-fang.jpg" alt="Sitong Fang" class="avatar">
+							<p class="title is-5">Sitong Fang</p>
+							<p class="role">Undergrad Student</p>
+							<p class="affiliation">Peking University</p>
+							<div class="contact-links">
+								<a href="mailto:sitongfang1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://github.com/Lavezlyn" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/jiaming-ji.jpg" alt="Jiaming Ji" class="avatar">
+							<p class="title is-5">Jiaming Ji †</p>
+							<p class="role">Ph.D Student</p>
+							<p class="affiliation">Peking University</p>
+							<div class="contact-links">
+								<a href="mailto:jiamg.ji@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://jijiaming.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Row 2 -->
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/yanxu-zhu.jpg" alt="Yanxu Zhu" class="avatar">
+							<p class="title is-5">Yanxu Zhu</p>
+							<p class="role">Research Assistant</p>
+							<p class="affiliation">Peking University</p>
+							<div class="contact-links">
+								<a href="mailto:yanxuzhu99@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://github.com/yanxuzhu" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/pengcheng-wen.jpg" alt="Pengcheng Wen" class="avatar">
+							<p class="title is-5">Pengcheng Wen</p>
+							<p class="role">Ph.D Student</p>
+							<p class="affiliation">HKUST</p>
+							<div class="contact-links">
+								<a href="mailto:pc.wen@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://github.com/W3en2g" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-one-third-desktop is-half-tablet">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/jinzhou-wu.jpg" alt="Jinzhou Wu" class="avatar">
+							<p class="title is-5">Jinzhou Wu</p>
+							<p class="role">Undergrad Student</p>
+							<p class="affiliation">Cornell University</p>
+							<div class="contact-links">
+								<a href="mailto:jw2782@cornell.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://jinzhouwu.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Row 3 (single centered) -->
+				<div class="column is-one-third-desktop is-half-tablet is-offset-one-third-desktop">
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<img src="assets/people/yaodong-yang.jpg" alt="Yaodong Yang" class="avatar">
+							<p class="title is-5">Yaodong Yang ‡</p>
+							<p class="role">Assistant Professor</p>
+							<p class="affiliation">Institute for AI, Peking University</p>
+							<div class="contact-links">
+								<a href="mailto:yaodong.yang@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+								<a href="https://scholar.google.com/citations?user=6yL0xw8AAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+								<a href="https://www.yangyaodong.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<p class="footer-note">† Project Lead &nbsp;&nbsp; ‡ Corresponding Authors</p>
+
+<footer class="footer">
+	<div class="content has-text-centered">
+		<p style="color: #666; font-family: 'Times New Roman', 'Times', serif;">
+			© 2025 PKU-Alignment Team. This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, 
+			licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		</p>
+	</div>
+</footer>
+
+	<script src="./assets/jquery.min.js"></script>
+	<script>
+		function performSearch() {
+			const input = document.getElementById('searchInput');
+			if (!input) return;
+			const searchTerm = input.value.toLowerCase();
+			if (searchTerm.trim() === '') {
+				alert('请输入搜索内容');
+				return;
+			}
+
+			const sections = document.querySelectorAll('.card-content, h1, h2, h3');
+			let found = false;
+
+			sections.forEach(section => {
+				const text = section.textContent.toLowerCase();
+				if (text.includes(searchTerm)) {
+					section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+					section.style.backgroundColor = '#ffeb3b';
+					setTimeout(() => {
+						section.style.backgroundColor = '';
+					}, 3000);
+					found = true;
+					return;
+				}
+			});
+
+			if (!found) {
+				alert(`未找到相关内容: "${searchTerm}"`);
+			}
+		}
+
+		// 回车键搜索
+		document.addEventListener('DOMContentLoaded', () => {
+			const input = document.getElementById('searchInput');
+			if (input) {
+				input.addEventListener('keypress', function(e) {
+					if (e.key === 'Enter') performSearch();
+				});
+			}
+
+			// 移动端导航栏汉堡菜单功能
+			const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+			burgers.forEach(el => {
+				el.addEventListener('click', () => {
+					const target = el.dataset.target;
+					const $target = document.getElementById(target);
+					el.classList.toggle('is-active');
+					$target.classList.toggle('is-active');
+				});
+			});
+		});
+	</script>
+</body>
+</html>
+
