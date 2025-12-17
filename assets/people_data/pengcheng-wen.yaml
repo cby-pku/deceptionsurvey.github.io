@@ -1,0 +1,10 @@
+name: "Pengcheng Wen"
+role: "Ph.D Student"
+affiliation: "HKUST"
+avatar: "assets/people/pengcheng-wen.jpg"
+links:
+  - type: email
+    url: "mailto:pc.wen@outlook.com"
+  - type: homepage
+    url: "https://github.com/W3en2g"
+

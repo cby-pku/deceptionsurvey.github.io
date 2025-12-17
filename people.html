@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css">
 	<link rel="stylesheet" href="./assets/navbar.css">
+	<!-- Added js-yaml for dynamic loading -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 	<style>
 		body {
 			font-family: 'Times New Roman', 'Times', serif;
@@ -189,260 +191,13 @@
 	</section>
 
 	<section class="section">
-		<div class="container">
-			<div class="section-title">Senior Advisory Panel</div>
-			<div class="columns is-multiline">
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/yaodong-yang.jpg" alt="Yaodong Yang" class="avatar">
-							<p class="title is-5">Yaodong Yang</p>
-							<p class="role">Assistant Professor</p>
-							<p class="affiliation">Institute for AI, Peking University</p>
-							<div class="contact-links">
-								<a href="mailto:yaodong.yang@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://scholar.google.com/citations?user=6yL0xw8AAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-								<a href="https://www.yangyaodong.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/Min-Yang.png" alt="Min Yang" class="avatar">
-							<p class="title is-5">Min Yang</p>
-							<p class="role">Professor</p>
-							<p class="affiliation">Fudan University</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=UnKf9FIAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/robert-trager.jpg" alt="Robert Trager" class="avatar">
-							<p class="title is-5">Robert Trager</p>
-							<p class="role">Professor</p>
-							<p class="affiliation">University of Oxford</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=LRmJzkgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/philip-torr.jpg" alt="Philip Torr" class="avatar">
-							<p class="title is-5">Philip Torr</p>
-							<p class="role">Professor</p>
-							<p class="affiliation">University of Oxford</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=kPxa2w0AAAAJ&hl=zh-CN" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/yike-guo.jpg" alt="Yike Guo" class="avatar">
-							<p class="title is-5">Yike Guo</p>
-							<p class="role">Chair Professor, Provost</p>
-							<p class="affiliation">HKUST</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=-0q6cIYAAAAJ&hl=zh-CN" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/yi-zeng.jpg" alt="Yi Zeng" class="avatar">
-							<p class="title is-5">Yi Zeng</p>
-							<p class="role">Professor, Director</p>
-							<p class="affiliation">University of Chinese Academy of Sciences</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=Rl-YqPEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/zhongyuan-wang.jpg" alt="Zhongyuan Wang" class="avatar">
-							<p class="title is-5">Zhongyuan Wang</p>
-							<p class="role">Research Scientist</p>
-							<p class="affiliation">Peking University</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=4XVJrRAAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/tiejun-huang.jpg" alt="Tiejun Huang" class="avatar">
-							<p class="title is-5">Tiejun Huang</p>
-							<p class="role">Professor, Director</p>
-							<p class="affiliation">Peking University</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/Ya-Qin-Zhang.jpg" alt="Ya-Qin Zhang" class="avatar">
-							<p class="title is-5">Ya-Qin Zhang</p>
-							<p class="role">Chair Professor, Dean</p>
-							<p class="affiliation">Tsinghua University</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=mDOMfxIAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/hongjiang-zhang.jpg" alt="Hongjiang Zhang" class="avatar">
-							<p class="title is-5">Hongjiang Zhang</p>
-							<p class="role">Professor</p>
-							<p class="affiliation">Independent Researcher</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com.hk/citations?hl=ja&user=u6wmNbQAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/andrew-yao.jpg" alt="Andrew Yao" class="avatar">
-							<p class="title is-5">Andrew Yao</p>
-							<p class="role">Professor, Dean</p>
-							<p class="affiliation">Tsinghua University</p>
-							<div class="contact-links">
-								<a href="https://scholar.google.com/citations?user=MWntmmMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="section-title" style="margin-top: 32px;">Project Leads and Core Contributors</div>
-			<!-- Row 1 -->
-			<div class="columns is-multiline">
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/boyuan-chen.jpg" alt="Boyuan Chen" class="avatar">
-							<p class="title is-5">Boyuan Chen †</p>
-							<p class="role">Undergrad Student</p>
-							<p class="affiliation">Peking University</p>
-							<div class="contact-links">
-								<a href="mailto:boyuan.chen.byc@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://cby-pku.github.io/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/sitong-fang.jpg" alt="Sitong Fang" class="avatar">
-							<p class="title is-5">Sitong Fang</p>
-							<p class="role">Undergrad Student</p>
-							<p class="affiliation">Peking University</p>
-							<div class="contact-links">
-								<a href="mailto:sitongfang1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://github.com/Lavezlyn" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/jiaming-ji.jpg" alt="Jiaming Ji" class="avatar">
-							<p class="title is-5">Jiaming Ji †</p>
-							<p class="role">Ph.D Student</p>
-							<p class="affiliation">Peking University</p>
-							<div class="contact-links">
-								<a href="mailto:jiamg.ji@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://jijiaming.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			<!-- Row 2 -->
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/yanxu-zhu.jpg" alt="Yanxu Zhu" class="avatar">
-							<p class="title is-5">Yanxu Zhu</p>
-							<p class="role">Research Assistant</p>
-							<p class="affiliation">Peking University</p>
-							<div class="contact-links">
-								<a href="mailto:yanxuzhu99@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://github.com/yanxuzhu" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/pengcheng-wen.jpg" alt="Pengcheng Wen" class="avatar">
-							<p class="title is-5">Pengcheng Wen</p>
-							<p class="role">Ph.D Student</p>
-							<p class="affiliation">HKUST</p>
-							<div class="contact-links">
-								<a href="mailto:pc.wen@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://github.com/W3en2g" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column is-one-third-desktop is-half-tablet">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/jinzhou-wu.jpg" alt="Jinzhou Wu" class="avatar">
-							<p class="title is-5">Jinzhou Wu</p>
-							<p class="role">Undergrad Student</p>
-							<p class="affiliation">Cornell University</p>
-							<div class="contact-links">
-								<a href="mailto:jw2782@cornell.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://jinzhouwu.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			<!-- Row 3 (single centered) -->
-				<div class="column is-one-third-desktop is-half-tablet is-offset-one-third-desktop">
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<img src="assets/people/yaodong-yang.jpg" alt="Yaodong Yang" class="avatar">
-							<p class="title is-5">Yaodong Yang ‡</p>
-							<p class="role">Assistant Professor</p>
-							<p class="affiliation">Institute for AI, Peking University</p>
-							<div class="contact-links">
-								<a href="mailto:yaodong.yang@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-								<a href="https://scholar.google.com/citations?user=6yL0xw8AAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-								<a href="https://www.yangyaodong.com/" target="_blank" rel="noopener" aria-label="Homepage"><i class="fas fa-home"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div class="container" id="people-container">
+			<!-- Loading Placeholder -->
+			<div class="has-text-centered">
+				<span class="icon is-large" style="color: #8B0000;">
+					<i class="fas fa-spinner fa-pulse fa-3x"></i>
+				</span>
+				<p style="margin-top: 10px; color: #666;">Loading people data...</p>
 			</div>
 		</div>
 	</section>
@@ -460,6 +215,100 @@
 
 	<script src="./assets/jquery.min.js"></script>
 	<script>
+		// New function to load people data dynamically
+		async function loadPeopleData() {
+			try {
+				const response = await fetch('assets/people_data/people_list.json');
+				if (!response.ok) throw new Error('Failed to load list');
+				const data = await response.json();
+				const container = document.getElementById('people-container');
+				
+				// Clear loading spinner
+				container.innerHTML = '';
+				
+				for (const section of data.sections) {
+					// Create Section Title
+					const titleDiv = document.createElement('div');
+					titleDiv.className = 'section-title';
+					// Add margin top if not the first section
+					if (container.children.length > 0) titleDiv.style.marginTop = '32px';
+					titleDiv.textContent = section.title;
+					container.appendChild(titleDiv);
+					
+					// Create Columns Container
+					const columnsDiv = document.createElement('div');
+					columnsDiv.className = 'columns is-multiline is-centered';
+					container.appendChild(columnsDiv);
+					
+					// Fetch all people in this section
+					const personPromises = section.people.map(id => 
+						fetch(`assets/people_data/${id}.yaml`)
+							.then(res => {
+								if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+								return res.text();
+							})
+							.then(text => jsyaml.load(text))
+							.then(person => ({ ...person, id }))
+							.catch(err => {
+								console.warn(`Failed to load ${id}.yaml`, err);
+								return null;
+							})
+					);
+					
+					const people = await Promise.all(personPromises);
+					
+					people.forEach(person => {
+						if (!person) return;
+						
+						const col = document.createElement('div');
+						// Standard column size
+						col.className = 'column is-one-third-desktop is-half-tablet';
+						
+						// Handle name and suffix
+						const suffix = person.suffix ? ` ${person.suffix}` : '';
+						
+						// Generate Links
+						const linksHtml = (person.links || []).map(link => {
+							let iconClass = 'fas fa-link';
+							if (link.type === 'email') iconClass = 'fas fa-envelope';
+							else if (link.type === 'google-scholar') iconClass = 'ai ai-google-scholar';
+							else if (link.type === 'homepage') iconClass = 'fas fa-home';
+							else if (link.type === 'twitter') iconClass = 'fab fa-twitter';
+							else if (link.type === 'github') iconClass = 'fab fa-github';
+							
+							const target = link.type === 'email' ? '' : 'target="_blank" rel="noopener"';
+							return `<a href="${link.url}" ${target} aria-label="${link.type}"><i class="${iconClass}"></i></a>`;
+						}).join('\n');
+
+						col.innerHTML = `
+							<div class="card has-text-centered">
+								<div class="card-content">
+									<img src="${person.avatar}" alt="${person.name}" class="avatar">
+									<p class="title is-5">${person.name}${suffix}</p>
+									<p class="role">${person.role}</p>
+									<p class="affiliation">${person.affiliation}</p>
+									<div class="contact-links">
+										${linksHtml}
+									</div>
+								</div>
+							</div>
+						`;
+						columnsDiv.appendChild(col);
+					});
+				}
+			} catch (e) {
+				console.error('Error loading people data:', e);
+				const container = document.getElementById('people-container');
+				container.innerHTML = `<div class="notification is-danger has-text-centered">
+					<p>Unable to load people data.</p>
+					<p style="font-size: 0.8em; color: #666;">${e.message}</p>
+				</div>`;
+			}
+		}
+
+		// Load data when DOM is ready
+		document.addEventListener('DOMContentLoaded', loadPeopleData);
+
 		function performSearch() {
 			const input = document.getElementById('searchInput');
 			if (!input) return;
@@ -513,4 +362,3 @@
 	</script>
 </body>
 </html>
-

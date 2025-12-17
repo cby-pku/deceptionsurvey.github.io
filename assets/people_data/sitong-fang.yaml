@@ -1,0 +1,10 @@
+name: "Sitong Fang"
+role: "Undergrad Student"
+affiliation: "Peking University"
+avatar: "assets/people/sitong-fang.jpg"
+links:
+  - type: email
+    url: "mailto:sitongfang1@gmail.com"
+  - type: homepage
+    url: "https://github.com/Lavezlyn"
+

@@ -1,0 +1,10 @@
+name: "Jinzhou Wu"
+role: "Undergrad Student"
+affiliation: "Cornell University"
+avatar: "assets/people/jinzhou-wu.jpg"
+links:
+  - type: email
+    url: "mailto:jw2782@cornell.edu"
+  - type: homepage
+    url: "https://jinzhouwu.com/"
+

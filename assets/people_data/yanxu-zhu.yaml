@@ -1,0 +1,10 @@
+name: "Yanxu Zhu"
+role: "Research Assistant"
+affiliation: "Peking University"
+avatar: "assets/people/yanxu-zhu.jpg"
+links:
+  - type: email
+    url: "mailto:yanxuzhu99@outlook.com"
+  - type: homepage
+    url: "https://github.com/yanxuzhu"
+

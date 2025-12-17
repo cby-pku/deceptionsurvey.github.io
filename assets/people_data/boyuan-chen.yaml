@@ -1,0 +1,11 @@
+name: "Boyuan Chen"
+role: "Undergrad Student"
+affiliation: "Peking University"
+avatar: "assets/people/boyuan-chen.jpg"
+suffix: "†"
+links:
+  - type: email
+    url: "mailto:boyuan.chen.byc@gmail.com"
+  - type: homepage
+    url: "https://cby-pku.github.io/"
+

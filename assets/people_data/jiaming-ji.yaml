@@ -1,0 +1,11 @@
+name: "Jiaming Ji"
+role: "Ph.D Student"
+affiliation: "Peking University"
+avatar: "assets/people/jiaming-ji.jpg"
+suffix: "†"
+links:
+  - type: email
+    url: "mailto:jiamg.ji@gmail.com"
+  - type: homepage
+    url: "https://jijiaming.com/"
+

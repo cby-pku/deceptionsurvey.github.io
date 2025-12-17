@@ -1,0 +1,8 @@
+name: "Philip Torr"
+role: "Professor"
+affiliation: "University of Oxford"
+avatar: "assets/people/philip-torr.jpg"
+links:
+  - type: google-scholar
+    url: "https://scholar.google.com/citations?user=kPxa2w0AAAAJ&hl=zh-CN"
+

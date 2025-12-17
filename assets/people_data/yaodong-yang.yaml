@@ -1,0 +1,12 @@
+name: "Yaodong Yang"
+role: "Assistant Professor"
+affiliation: "Institute for AI, Peking University"
+avatar: "assets/people/yaodong-yang.jpg"
+suffix: "‡"
+links:
+  - type: email
+    url: "mailto:yaodong.yang@pku.edu.cn"
+  - type: google-scholar
+    url: "https://scholar.google.com/citations?user=6yL0xw8AAAAJ&hl"
+  - type: homepage
+    url: "https://www.yangyaodong.com/"

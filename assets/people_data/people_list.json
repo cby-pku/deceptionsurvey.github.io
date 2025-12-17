@@ -1,0 +1,35 @@
+{
+  "sections": [
+    {
+      "id": "advisors",
+      "title": "Senior Advisory Panel",
+      "people": [
+        "yaodong-yang",
+        "min-yang",
+        "robert-trager",
+        "philip-torr",
+        "yike-guo",
+        "yi-zeng",
+        "zhongyuan-wang",
+        "tiejun-huang",
+        "ya-qin-zhang",
+        "hongjiang-zhang",
+        "andrew-yao"
+      ]
+    },
+    {
+      "id": "contributors",
+      "title": "Project Leads and Core Contributors",
+      "people": [
+        "boyuan-chen",
+        "sitong-fang",
+        "jiaming-ji",
+        "yanxu-zhu",
+        "pengcheng-wen",
+        "jinzhou-wu",
+        "yaodong-yang"
+      ]
+    }
+  ]
+}
+
